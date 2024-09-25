@@ -1,0 +1,34 @@
+#
+# Docker compose to start Redis and Postgres w/ pg_vector support.
+#
+
+
+# postgres as port 5432
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: postgres-docker
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: aidemo           # our app database name
+      POSTGRES_USER: postgres       # username to connect to our database
+      POSTGRES_PASSWORD: postgres   # password to connect to our database
+      VECTOR_STORE_TYPE: pgVector
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-docker
+    ports:
+      - "5050:5050"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: bmcginnis@rccl.com  # put your email here!
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_PORT: 5050
+
+
+#  redis:
+#    image: 'redis'
+#    ports:
+#      - '6379'
+

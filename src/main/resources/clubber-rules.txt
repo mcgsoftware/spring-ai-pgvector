@@ -1,0 +1,21 @@
+* How to play the game of Clubber
+
+The game of Clubber is a simple game that can be played by two or more players.
+The game is played with a list of bars for players to visit.
+The object of the game is to visit as many bars as possible and the player who
+visits the most bars is the winner.
+
+
+The game of Clubber is played as follows:
+* All players must be 21 and over.
+* Players agree on the list of bars to visit.
+* Bars must be within walking distance of each other.
+* Players go together to the first bar on the list.
+* Players must order a drink at each bar.
+* Players must finish their drink before moving on to the next bar.
+* Players must visit all the bars on the list in order.
+* The player who visits the most bars is the winner.
+* If a player vomits or gets sick and cannot continue, they are disqualified.
+* If a player is too drunk to continue, they are disqualified.
+* If a player is arrested, they are disqualified.
+

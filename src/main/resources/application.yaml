@@ -1,0 +1,90 @@
+#
+# OpenAI API Key properties file style. I'm using the env var instead now.
+# Spring ai automatically picks up the env var SPRING_AI_OPENAI_API_KEY by itself. Weird, but it works.
+# $ export SPRING_AI_OPENAI_API_KEY=sk-blahblahblah
+#
+#
+# Postgres database connection (Brian's personal database, don't use for other projects)
+#
+# Uncomment for my cloud hosted postgres database
+#spring.datasource.url=jdbc:postgresql://ep-blue-hall-a4sb0ma7.us-east-1.aws.neon.tech/products?sslmode=require
+#spring.datasource.username=products_owner
+#spring.datasource.password=lwtuSnJCT84k
+#spring.datasource.driver-class-name=org.postgresql.Driver
+
+# This is for your local docker postgres database.
+#spring:
+#    datasource:
+#        url: jdbc:postgresql://localhost/aidemo
+#        username: postgres
+#        password: postgres
+#        driver-class-name: org.postgresql.Driver
+#    ai:
+#        vectorstore:
+#            pgvector:
+#                initialize-schema: true
+#                index-type: HNSW
+#                distance-type: COSINE_DISTANCE
+#                dimensions: 1536
+#                schema-validation: true
+#                remove-existing-vector-store-table: false
+#
+#        openai:
+#            api-key: ${SPRING_AI_OPENAI_API_KEY}
+#            chat:
+#                model: gpt-4
+#            embedding:
+#                model: text-embedding-ada-002
+
+
+
+
+
+
+
+# Tell spring where our docker compose file is located
+# Uncomment this line for automatic docker compose up / down with spring app start/stop
+#spring.docker.compose.file = ./postgres/docker-compose.yaml
+#
+#spring.datasource.url: jdbc:postgresql://localhost/aidemo
+#spring.datasource.username: postgres
+#spring.datasource.password: postgres
+#spring.datasource.driver-class-name: org.postgresql.Driver
+
+# setop the vectorstore for pg_vector. I think the schema should be created by us, not them.
+# will work on this later. For now, just use the default schema.
+#spring.ai.vectorstore.pgvector.initialize-schema=true
+#spring.ai.vectorstore.pgvector.index-type=HNSW
+#spring.ai.vectorstore.pgvector.distance-type=COSINE_DISTANCE
+#spring.ai.vectorstore.pgvector.dimensions=1536
+#spring.ai.vectorstore.pgvector.schema-validation=true
+#spring.ai.vectorstore.pgvector.remove-existing-vector-store-table=false
+
+## Your OpenAI information
+#spring.ai.openai.chat.model=gpt-4
+#spring.ai.openai.embedding.model=text-embedding-ada-002
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/aidemo
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  ai:
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 1536
+        schema-validation: true
+        remove-existing-vector-store-table: false
+
+    openai:
+      chat:
+        model: gpt-4
+      embedding:
+        model: text-embedding-ada-002
+
+
+

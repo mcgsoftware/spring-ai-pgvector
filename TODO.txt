@@ -1,0 +1,6 @@
+todo
+---------
+[ ] fix problem can't find pgvector store by compile, but found it here:
+https://github.com/spring-projects/spring-ai/blob/v1.0.0-M2/vector-stores/spring-ai-pgvector-store/src/main/java/org/springframework/ai/vectorstore/PgVectorStore.java
+
+
